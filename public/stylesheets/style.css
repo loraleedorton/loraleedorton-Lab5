@@ -1,8 +1,224 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	padding: 50px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d1/Mount_Everest_as_seen_from_Drukair2_PLW_edit.jpg);
+	background-color:steelblue;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-a {
-  color: #00B7FF;
+#meat {
+	text-align: center;
+	background-color: white;
+	margin: auto;
+	padding: 20px 30px 100px 30px;
+	height: 100%;
+	width: 75%;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+table {
+	width: 100%;
+	border: center;
+	padding:0px 70px 0px 70px;
+}
+
+#commentForm {
+	float: left;
+	margin: 20px;
+}
+
+#name {
+	width: 252px;
+}
+
+#comment {
+	width: 300px;
+	height: 60px;
+	text-align: top center;
+}
+
+#postComment {
+	margin:auto;
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background: -moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf', GradientType=0);
+	background-color: #ededed;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: black;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+
+#postComment:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background: -moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed', GradientType=0);
+	background-color: #dfdfdf;
+}
+
+#postComment:active {
+	position: relative;
+	top: 1px;
+}
+
+#getCommentsQuery {
+	-moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+	box-shadow: inset 0px 1px 0px 0px #ffffff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background: -moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: -ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf', GradientType=0);
+	background-color: #ededed;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: black;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 6px 24px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+	margin: 20px;
+}
+
+#getCommentsQuery:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background: -moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: -ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed', GradientType=0);
+	background-color: #dfdfdf;
+}
+
+#getCommentsQueryt:active {
+	position: relative;
+	top: 1px;
+}
+
+#getComments {
+	width: 300px;
+	height: 50px;
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background: -moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: -webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: -o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: -ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99', GradientType=0);
+	background-color: #599bb3;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 13px 32px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #3d768a;
+}
+
+#getComments:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background: -moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: -webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: -o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: -ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3', GradientType=0);
+	background-color: #408c99;
+}
+
+#getComments:active {
+	position: relative;
+	top: 1px;
+}
+
+#deleteComments {
+	clear: both;
+	float: bottom;
+	width: 300px;
+	height: 50px;
+	-moz-box-shadow: 0px 10px 14px -7px #276873;
+	-webkit-box-shadow: 0px 10px 14px -7px #276873;
+	box-shadow: 0px 10px 14px -7px #276873;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #599bb3), color-stop(1, #408c99));
+	background: -moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: -webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: -o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: -ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+	background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99', GradientType=0);
+	background-color: #599bb3;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 13px 32px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #3d768a;
+}
+
+#deleteComments:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #408c99), color-stop(1, #599bb3));
+	background: -moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: -webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: -o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: -ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+	background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3', GradientType=0);
+	background-color: #408c99;
+}
+
+#comments {
+	clear: both;
+	float: bottom;
+	width: 30%;
+	margin: auto;
 }

@@ -1,8 +1,10 @@
 $(document).ready(function() {
-    $("#postComment").click(function() {
+    $("#postComment").click(function(event) {
+        event.preventDefault();
         var myobj = { Name: $("#name").val(), Comment: $("#comment").val() };
         var jobj = JSON.stringify(myobj);
-        $("#json").text(jobj);
+        $("#json").html("<b>" + "Click Get Comments to see what you've just posted" + "</b>");
+        $("#comments").html("");
         var url = "comment";
         $.ajax({
             url: url,
@@ -10,19 +12,22 @@ $(document).ready(function() {
             data: jobj,
             contentType: "application/json; charset=utf-8",
             success: function(data, textStatus) {
-                $("#done").html(textStatus);
+                var status = textStatus.toUpper();
+                $("#done").html(status);
             }
         });
+        $("#name").val("");
+        $("#comment").val("");
     });
     $("#getComments").click(function() {
+        $("#json").html("");
         $.getJSON('comment', function(data) {
             console.log(data);
-            var everything = "<ul>";
+            var everything ="";
             for (var comment in data) {
                 var com = data[comment];
-                everything += "<li> Name: " + com.Name + " -- Comment: " + com.Comment + "</li>";
+                everything += "<b>" + com.Name + "</b>" + "<br>" + com.Comment + "<br><br>";
             }
-            everything += "</ul>";
             $("#comments").html(everything);
         });
     });
@@ -40,12 +45,12 @@ $(document).ready(function() {
         var url = 'query?q=' + $("#query").val();
         $.getJSON(url, function(data) {
             console.log("query returned data: ", data);
-            var everything = "<ul>";
+            var everything = "";
             $.each(data, function (i, item) {
-                everything += "<li> Name: " + data[i].Name + " -- Comment: " + data[i].Comment + "</li>";
+                everything += "<b>" + data[i].Name + "</b>" + "<br>" + data[i].Comment + "<br><br>";
             });
-            everything += "</ul>";
             $("#comments").html(everything);    
-        })
-    })
+        });
+    $("#query").val("");
+    });
 });

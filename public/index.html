@@ -2,27 +2,39 @@
 <html>
 
 <head>
-    <title>Comments!</title>
+    <title>Comments</title>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="javascripts/comments.js"></script>
-</head>
+    <link rel="stylesheet" href="stylesheets/style.css" </head>
 
-<body>
-    <form id="commentForm" action="">
-        <label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br>
-        <label for="comment">Comment: </label><input type="text" id="comment" placeholder="Comment"><br>
-    </form>
-
-    <button id="postComment">Post Comment</button><br>
-    <button id="getComments">Get Comments</button><br><br>
-    <form id="queryForm" action="">
-        <label for="query">User: </label><input type="text" id="query" placeholder="Someone's Name"><br>
-    </form>
-    <button id="getCommentsQuery">Get Comments from a Specific User</button><br><br>
-    <button id="deleteComments">Delete All</button><br>
-    <div id="json"></div>
-    <div id="done"></div><br>
-    <div id="comments">There are no comments</div>
-</body>
+    <body>
+        <div id="meat">
+            <h1>Comment Forum</h1>
+            <table>
+                <tr>
+                    <td>
+                        <form id="commentForm" action="">
+                            <h3>Add New</h3>
+                            <label for="name">Name: </label><input type="text" id="name" placeholder="Name"><br>
+                            <label for="comment"></label><input type="text" id="comment" placeholder="Comment"><br><br>
+                            <button id="postComment">Post Comment</button><br><br>
+                        </form>
+                    </td>
+                    <td>
+                        <h3>Find the Comments<br>Written by a Specific User</h3>
+                        <form id="queryForm" action="">
+                            <label for="query">User: </label><input type="text" id="query" placeholder="Someone's Name"><br>
+                        </form>
+                        <button id="getCommentsQuery">Get User's Comments</button><br><br>
+                    </td>
+                </tr>
+            </table>
+            <button id="getComments">Get Comments</button><br><br>
+            <div id="json"></div>
+            <div id="done"></div><br>
+            <div id="comments">Click Get Comments to see comments</div><br>
+            <button id="deleteComments">Delete All</button><br>
+        </div>
+    </body>
 
 </html>
